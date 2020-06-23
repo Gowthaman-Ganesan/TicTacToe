@@ -6,10 +6,10 @@ export function calculateWinner(cells) {
         [0,3,6],
         [1,4,7],
         [2,5,8],
-        [1,4,8],
+        [0,4,8],
         [2,4,6],
     ];
-    for(let i = 0; i< lines.length - 1; i++) {
+    for(let i = 0; i< lines.length; i++) {
         const [a, b, c] = lines[i];
         if (cells[a] && cells[a] === cells[b] && cells[b] === cells[c]) {
             return cells[a]
