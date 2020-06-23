@@ -9,11 +9,11 @@ export function calculateWinner(cells) {
         [1,4,8],
         [2,4,6],
     ];
-    for (let x = 0; x < 5; x++) {
-        const [a,b,c] = lines[x];
-        if(cells[a] && cells[a] === cells[b] && cells[b] === cells[c]) {
+    for(let i = 0; i< lines.length - 1; i++) {
+        const [a, b, c] = lines[i];
+        if (cells[a] && cells[a] === cells[b] && cells[b] === cells[c]) {
             return cells[a]
         }
-        return null;
     }
+    return null;
 }

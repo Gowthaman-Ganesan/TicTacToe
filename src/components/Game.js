@@ -11,21 +11,22 @@ class Game extends Component {
         }
     }
     onButtonClick = (i) => {
-        console.log(i);
         const {xIsNext} = this.state,
-            cells = this.state.cells,
-            winner= calculateWinner(cells);
+            cells = this.state.cells;
+        let winner = calculateWinner(cells);
         if(winner || cells[i]) {
             return;
         }
         cells[i] = xIsNext ? 'X' : 'O';
-        this.setState({cells, xIsNext: !this.state.xIsNext});
+        this.setState({cells, xIsNext: !xIsNext});
     };
     render() {
-        const {cells}= this.state;
+        const {cells}= this.state,
+            winner= calculateWinner(cells);
         return (
             <div>
                 <TicTac onButtonClick={this.onButtonClick} cells={cells}/>
+                {winner ? <h2>Winner is {winner}</h2> : ''}
             </div>
         );
     }
