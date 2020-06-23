@@ -1,18 +1,24 @@
-@import url(~antd/dist/antd.css);
-html, body, #root, .App {
-  height: 100%; }
+@import '~antd/dist/antd.css';
+html,body, #root, .App {
+  height: 100%;
+}
 
 .App {
   text-align: center;
-  background-color: #222222; }
+  background-color: #222222;
+}
 
 .App-logo {
   height: 40vmin;
-  pointer-events: none; }
+  pointer-events: none;
+}
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
-    animation: App-logo-spin infinite 20s linear; } }
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
@@ -21,24 +27,32 @@ html, body, #root, .App {
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white; }
+  color: white;
+}
 
 .App-link {
-  color: #61dafb; }
+  color: #61dafb;
+}
 
 @keyframes App-logo-spin {
   from {
-    transform: rotate(0deg); }
+    transform: rotate(0deg);
+  }
   to {
-    transform: rotate(360deg); } }
-.site {
+    transform: rotate(360deg);
+  }
+}
+
+.site{
   height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center; }
-  .site h2 {
-    color: #FFFF00; }
+  justify-content: center;
+  h2 {
+    color: #FFFF00;
+  }
+}
 
 .cell {
   line-height: 82px;
@@ -52,15 +66,21 @@ html, body, #root, .App {
   box-shadow: 0px 0px 0px 5px #222222 inset;
   border: none;
   border-radius: 15px;
-  cursor: pointer; }
-  .cell svg {
+  cursor: pointer;
+  svg {
     visibility: hidden;
-    transition: visibility 0.4s; }
-  .cell.fade svg {
-    visibility: visible;
-    transition: visibility 4s; }
-  .cell:focus {
-    outline: none; }
+    transition: visibility 0.4s;
+  }
+  &.fade {
+    svg {
+      visibility: visible;
+      transition: visibility 4s;
+    }
+  }
+  &:focus{
+    outline: none;
+  }
+}
 
 .refresh {
   background: transparent;
@@ -71,11 +91,12 @@ html, body, #root, .App {
   transition: background-color 0.3s;
   border-radius: 4px;
   text-align: center;
-  margin-top: 13px; }
-  .refresh:focus {
-    outline: none; }
-  .refresh:active, .refresh:hover {
+  margin-top: 13px;
+  &:focus {
+    outline: none;
+   }
+  &:active, &:hover {
     background: #EAEBEC;
-    transition: background-color 0.3s; }
-
-/*# sourceMappingURL=App.css.map */
+    transition: background-color 0.3s;
+  }
+}
