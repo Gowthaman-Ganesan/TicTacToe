@@ -1,0 +1,81 @@
+@import url(~antd/dist/antd.css);
+html, body, #root, .App {
+  height: 100%; }
+
+.App {
+  text-align: center;
+  background-color: #222222; }
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none; }
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear; } }
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white; }
+
+.App-link {
+  color: #61dafb; }
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg); }
+  to {
+    transform: rotate(360deg); } }
+.site {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; }
+  .site h2 {
+    color: #FFFF00; }
+
+.cell {
+  line-height: 82px;
+  font-size: 100px;
+  text-align: center;
+  padding: 10px;
+  height: 150px;
+  width: 150px;
+  float: left;
+  background-color: #2D2D2D;
+  box-shadow: 0px 0px 0px 5px #222222 inset;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer; }
+  .cell svg {
+    visibility: hidden;
+    transition: visibility 0.4s; }
+  .cell.fade svg {
+    visibility: visible;
+    transition: visibility 4s; }
+  .cell:focus {
+    outline: none; }
+
+.refresh {
+  background: transparent;
+  border: none;
+  font-size: 60px;
+  color: rebeccapurple;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  border-radius: 4px;
+  text-align: center;
+  margin-top: 13px; }
+  .refresh:focus {
+    outline: none; }
+  .refresh:active, .refresh:hover {
+    background: #EAEBEC;
+    transition: background-color 0.3s; }
+
+/*# sourceMappingURL=App.css.map */
